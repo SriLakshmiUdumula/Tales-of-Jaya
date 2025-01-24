@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/story_detail.css' %}">
+<div class="container">
+    <div class="story-title-box">{{ story.title }}</div>
+    <img src="{{ story.image.url }}" alt="{{ story.title }}" class="story-image">
+    <p>{{ story.content|linebreaks }}</p>
+
+</div>
+{% endblock %}
