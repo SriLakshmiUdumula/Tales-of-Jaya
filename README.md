@@ -13,7 +13,7 @@ click on the story which you want to read.
 <img src="/screenshorts/Screenshot 2025-01-26 115613.png" alt="Screenshot of the project" width="600" height = "400">
 
 Here is how the story page looks like.
-<img src="/screenshorts/Screenshot 2025-01-26 115654.png" alt="Screenshot of the project" width="400" height = "800">
+<img src="(https://github.com/SriLakshmiUdumula/Tales-of-Jaya/blob/main/screenshots/Screenshot%202025-01-26%20115547.png)" alt="Screenshot of the project" width="400" height = "800">
 
 ## Technologies Used
 Backend: Django (Python)
