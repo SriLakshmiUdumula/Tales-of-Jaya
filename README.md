@@ -10,10 +10,10 @@ clicking on the parvam you can navigate to it to find the stories available in i
 <img src="screenshots/Screenshot 2025-01-26 115547.png" alt="Screenshot of the project" width="1000" height="300">
 
 click on the story which you want to read.
-<img src="screenshots/Screenshot 2025-01-26 115613.png" alt="Screenshot of the project" width="600" height = "400">
+<img src="screenshots/Screenshot 2025-01-26 115613.png" alt="Screenshot of the project" width="800" height = "400">
 
 Here is how the story page looks like.
-<img src="screenshots/Screenshot 2025-01-26 115654.png" alt="Screenshot of the project" width="400" height = "800">
+<img src="screenshots/Screenshot 2025-01-26 115654.png" alt="Screenshot of the project" width="800" height = "900">
 
 ## Technologies Used
 Backend: Django (Python)
