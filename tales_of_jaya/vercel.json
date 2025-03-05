@@ -1,0 +1,14 @@
+{
+    "builds": [{
+        "src": "tales_of_jaya/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "tales_of_jaya/wsgi.py"
+
+        }
+    ]
+}

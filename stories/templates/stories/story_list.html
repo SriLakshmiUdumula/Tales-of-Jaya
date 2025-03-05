@@ -8,13 +8,27 @@
 <div class="story-list">
     {% for story in stories %}
     <div class="story-card">
-        <a href="{% url 'story_detail' story.id %}">
+        <a href="{% url 'story_detail' story_slug=story.slug %}">
+
             <div class="image-container">
-                <img src="{{ story.image.url }}" alt="{{ story.title }}">
+                <img src="{{ story.image.url }}" alt="{{ story.title }}" height= 600px>
                 <div class="title-overlay">{{ story.title }}</div>
             </div>
-        </a>
+
+        
+        <!-- Like button outside anchor -->
+    
+</a>
+
+<button class="like-button" data-story-id="{{ story.id }}">
+    👍 <span id="like-count-{{ story.id }}">{{ story.likes }}</span>
+</button>
+
     </div>
     {% endfor %}
 </div>
+
+
 {% endblock %}
+
+

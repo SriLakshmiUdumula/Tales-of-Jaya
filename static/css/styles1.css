@@ -11,7 +11,7 @@ body {
 }
 
 /* Header styling */
-header {
+h1 {
     background-size: cover;
     background-position: center;
     height: 200px;
@@ -50,10 +50,38 @@ header {
     }
 }
 
+.about-home {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+
+
+.about-home p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.about-home {
+    border: 2px solid #FFD700;
+    padding: 20px;
+}
+
+
+
+
+
 /* Parvam blocks */
 .parvam {
     background-color: #f8f9fa;
-    border: 1px solid #ccc;
+    border: 1px solid #FFD700;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -70,6 +98,7 @@ header {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+    border-color: #FFD700;
 }
 
 @media (max-width: 768px) {
@@ -116,11 +145,13 @@ header {
 }
 
 .scrolling-images img {
-    width: 400px; /* Fixed width */
-    height: 400px; /* Fixed height to ensure consistency */
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height to ensure consistency */
     object-fit: cover; /* Ensures the image scales without stretching */
     margin: 30px; /* Margin between images */
     border-radius: 7px; /* Optional: Rounded corners */
+    box-shadow: #FFD700;
+    border-color: #FFD700;
 }
 
 .scrolling-images img:hover {
@@ -162,4 +193,8 @@ header {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

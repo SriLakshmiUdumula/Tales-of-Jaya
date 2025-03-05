@@ -1,88 +1,101 @@
+/* static/stories/story_list.css */
+
+/* Story List */
 .story-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
 }
 
+/* Story Cards */
 .story-card {
-    width: 300px;
-    border-radius: 12px;
+    width: calc(25% - 20px); /* Adjust width to fit 4 cards per line */
+    height: 400px; /* Fixed height */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    background-color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: rgba(255, 245, 230, 0.9);
+    border: 2px solid #FFD700;
     text-align: center;
+    position: relative;
 }
 
+/* Story Card Hover */
 .story-card:hover {
     transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
+/* Story Card Image */
 .image-container img {
     width: 100%;
-    height: 100%;
+    height: 100%; /* Adjust image height */
     object-fit: cover;
-    display: block;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Images */
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Animation for Smooth Appearance */
+.story-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .title-overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(233, 30, 99, 0.9); /* Pinkish overlay */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.story-card:hover {
-    transform: scale(1.05);
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.title-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(233, 30, 99, 0.9); /* Pinkish background */
+    height: 35%;
+    background: #bc5a3c; /* Pinkish overlay */
     color: #fff;
     text-align: center;
     padding: 15px 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
-
 h2 {
-    background-color: #ab0707; /* Light background for title box */
+    background-color: #F8F5E1; /* Light background for title box */
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.like-button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.like-button:hover {
+    color: rgb(245, 245, 249);
 }

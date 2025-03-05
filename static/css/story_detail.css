@@ -1,39 +1,59 @@
 /* static/stories/story_detail.css */
+
+/* Story Title Styling */
 .story-title-box {
-    background-color: #f4f4f4; /* Light background for title box */
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgba(255, 223, 186, 0.9); /* Parchment-like background */
+    padding: 15px;
+    border-radius: 8px;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    color: #333;
+    color: #4A2C2A; /* Deep brown for an ancient look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Mukta', sans-serif;
 }
 
+/* Container Styling */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: 'Mukta', sans-serif;
+    color: #4A2C2A;
+    background: rgba(255, 245, 230, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Story Content */
 h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-top: 0;
-    align-content: center;
+    font-size: 2rem;
+    color: #5A3E36;
+    text-align: center;
+    padding: 10px;
+    background-color: #FFD700;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 p {
-    font-size: 1.1em;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
     margin: 10px 0;
     text-align: justify;
 }
 
+/* Images */
 img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 15px auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 2px solid #5A3E36;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
