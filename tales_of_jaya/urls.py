@@ -23,5 +23,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('stories.urls')),  # Include URLs from the 'stories' app
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
