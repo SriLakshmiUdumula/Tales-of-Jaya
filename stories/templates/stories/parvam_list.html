@@ -17,40 +17,25 @@
     </p>
 </div>
 
-<div class="sidebar">
-    <h2>Parvams</h2>
-    <ul>
-        {% for parvam in parvams %}
-        <li class="parvam"><a href="{% url 'story_list' parvam.id %}">{{ parvam.name }}</a></li>
-        {% endfor %}
-    </ul>
+<div class="parvam-grid">
+    {% for parvam in parvams %}
+        {% with forloop.counter as count %}
+        <a href="{% url 'story_list' parvam.id %}" class="parvam-card">
+            {% if count <= 18 %}
+                <img src="{% static 'images/image' %}{{ count }}.jpg" alt="{{ parvam.name }}">
+            {% else %}
+                <div class="fallback-bg">{{ parvam.name|upper }}</div>
+            {% endif %}
+            <div class="overlay">{{ parvam.name }}</div>
+        </a>
+        {% endwith %}
+    {% endfor %}
 </div>
 
 <!-- About Home Section -->
 
 
-<div class="scrolling-images">
-    <img src="{% static 'images/process-aws.webp' %}" alt="Image 1" 
-         data-title="Adi Parva" 
-         data-content="Adi Parva, the ‘book of beginning’ is the first of the eighteen parvas of the great epic of Mahabharata.
-             It lays the basic story startup, narrated by Sauti, summoned by the rishis at Naimisharanya.
-              The Adi Parva narrates the history of the Bharata race in detail, also tracing the history of the Bhrigu race. 
-              The early life of the Pandava and Kaurava prince families is also depicted in this parva. 
-              This parva is divided into 19 sub parvas and about 236 chapters.
-               The death of the rakshasa Vaka and the marriage of Draupadi were some of the major events of the Adi Parva.">
-    
-    <img src="{% static 'images/mahabharat.avif' %}" alt="Image 2" 
-         data-title="The Story of Janamejaya" 
-         data-content="Janamejaya was the great-grandson of Arjuna and conducted the Sarpa Satra, a snake sacrifice, to avenge his father.">
-    
-    <img src="{% static 'images/kurukshetra1.jpg' %}" alt="Image 3" 
-         data-title="The Sage Vyasa" 
-         data-content="Vyasa, the author of the Mahabharata, is revered as one of the greatest sages in Indian history.">
-    
-    <img src="{% static 'images/kuru2.jpeg' %}" alt="Image 4" 
-         data-title="The Pandavas and Kauravas" 
-         data-content="The Pandavas and Kauravas were cousins who fought each other in the Kurukshetra War, marking a pivotal point in Indian history.">
-</div>
+                  
 
 <!-- Modal Structure -->
 <div id="imageModal" class="modal">

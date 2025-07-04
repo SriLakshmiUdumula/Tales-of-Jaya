@@ -1,181 +1,143 @@
-/* styles.css */
-
+/* === General Page Styles === */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('../images/header-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
-/* Header styling */
+/* === Header === */
 h1 {
-    background-size: cover;
-    background-position: center;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(239, 33, 33, 0.7);
-    position: relative;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
-    header {
+    h1 {
         height: 150px;
-        font-size: 1.2em;
+        font-size: 2rem;
     }
 }
 
-/* Sidebar styling */
-.sidebar {
-    width: 200px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    height: calc(100vh - 200px);
-    overflow-y: auto;
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        top: 150px;
-        position: relative;
-    }
-}
-
+/* === Intro Section === */
 .about-home {
     text-align: center;
     max-width: 800px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #FFD700;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-}
-
-
-
-.about-home p {
-    font-size: 1.1rem;
     color: white;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
-.about-home {
-    border: 2px solid #FFD700;
-    padding: 20px;
-}
-
-
-
-
-
-/* Parvam blocks */
-.parvam {
-    background-color: #f8f9fa;
-    border: 1px solid #FFD700;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.parvam:hover {
-    background-color: #e2e6ea;
-}
-
-/* Parvam images section */
-.parvam-images {
-    margin-left: 220px;
-    padding: 10px;
+.parvam-grid {
     display: flex;
     flex-wrap: wrap;
-    border-color: #FFD700;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+     margin: 0 auto; /* Center the grid */
 }
 
-@media (max-width: 768px) {
-    .parvam-images {
-        margin-left: 0;
-    }
+.parvam-card {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
 }
 
-/* Each parvam item */
-.parvam-item {
-    width: 60%;
-    margin: 1%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    text-align: center;
-}
-
-.parvam-item h3 {
-    margin: 0;
-    padding: 10px 0;
-}
-
-/* Images in parvam items */
-.parvam-image {
+.parvam-card img {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-/* Scrolling images section */
-.scrolling-images {
-    margin-left: 220px;
+.parvam-card .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    color: 2px solid #FFD700;
+    text-align: center;
     padding: 10px;
-    height: calc(100vh - 200px);
-    overflow-x: scroll;
-    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
+.parvam-card:hover {
+    transform: scale(1.05);
+}
+
+/* Optional: Fallback for no image */
+.fallback-bg {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #bbb, #ddd);
+    color: #222;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .scrolling-images {
-        margin-left: 0;
+    .parvam-card {
+        width: 45%;
+        height: 180px;
     }
 }
 
-.scrolling-images img {
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height to ensure consistency */
-    object-fit: cover; /* Ensures the image scales without stretching */
-    margin: 30px; /* Margin between images */
-    border-radius: 7px; /* Optional: Rounded corners */
-    box-shadow: #FFD700;
-    border-color: #FFD700;
+@media (max-width: 480px) {
+    .parvam-card {
+        width: 90%;
+        height: 160px;
+    }
 }
 
-.scrolling-images img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
-
+/* === Modal Styling (if used) === */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1000; /* Sit on top */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 10% from the top and centered */
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Width of modal */
+    width: 80%;
     max-width: 500px;
     border-radius: 8px;
 }
@@ -192,9 +154,25 @@ h1 {
 .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
 }
 
+/* === Hide Scrollbar === */
 ::-webkit-scrollbar {
     display: none;
+}
+
+.parvam-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.6); /* Transparent white */
+    color:#000;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.1rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
