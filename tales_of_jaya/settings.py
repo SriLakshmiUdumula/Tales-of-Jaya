@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -121,11 +122,13 @@ USE_TZ = True
 # URL to use when referring to static files located in STATICFILES_DIRS
 STATIC_URL = '/static/'
 
-# This should point to your static directory
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+
+# This should point to your static directory
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
