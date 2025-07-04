@@ -1,0 +1,1 @@
+web: gunicorn tales_of_jaya.wsgi:application
