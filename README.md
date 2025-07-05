@@ -7,7 +7,7 @@ TALES OF JAYA is a web-based application built using the Django framework that s
 ## Screenshot
 Homepage
 clicking on the parvam you can navigate to it to find the stories available in it.
-<img src="screenshots/Screenshot 2025-03-05 190901.png" alt="Screenshot of the project" width="800" height="400"><br/><br/>
+<img src="screenshots/Screenshot 2025-07-05 141623.png" alt="Screenshot of the project" width="800" height="400"><br/><br/>
 
 click on the story which you want to read.
 <img src="screenshots/Screenshot 2025-03-05 190934.png" alt="Screenshot of the project" width="800" height = "400"><br/><br/>
